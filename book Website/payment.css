@@ -1,0 +1,143 @@
+/* body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+#paynav{
+    display: flex;
+    justify-content: space-around;
+}
+#paynav div i{
+    font-size: 28px;
+    padding: 10px;
+}
+#paymain{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.paydiv-1{
+    /* margin: 10px; */
+/* }
+#paymain div input{
+ width: 400px;
+ height: 42px;
+ border-radius: 4px;
+
+}
+.payinput1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.paydivcard{
+    background-color: #e3ebec;
+} */ 
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#paynav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#paynav div {
+    font-size: 24px;
+}
+
+#paymain {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 20px; */
+    margin-left: 450px;
+}
+
+.paydiv-1 {
+    max-width: 500px;
+}
+
+.paydiv-1 div {
+    margin: 8px 0;
+    /* margin-left: 100px; */
+}
+
+.paydiv-1 input[type="text"],
+.paydiv-1 select {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.payinput1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paydivcard {
+    background-color: #e3ebec;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.paydivcard input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.paydivcard div {
+    margin-bottom: 10px;
+}
+
+.paydivcard input[type="radio"] {
+    margin-right: 5px;
+}
+
+.paybtn {
+    background-color: #007bff;
+    color: #fff;
+    width: 440px;
+    margin-left: 30px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.paybtn:hover {
+    background-color: #0056b3;
+}
+
+.paydiv-2{
+    display: flex;
+    justify-content: space-between;
+   width: 600px;
+}
+.paydiv-2 div img{
+    width: 100px;
+}
+.paydiv-2{
+    background-color:#ccc;
+
+
+}

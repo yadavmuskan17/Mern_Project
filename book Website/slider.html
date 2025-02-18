@@ -1,0 +1,236 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.slider-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; 
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  bottom: 0;
+}
+
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50px;
+  margin: 0 .2em 1em;
+  &:hover {
+    background: red;
+  }
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  padding: 8em 1em 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: left 0s .75s;
+}
+
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+  transition: left .65s ease-out;
+} 
+
+.slide-1 {
+  background-image: url("https://source.unsplash.com/t7YycgAoVSw/1600x900");
+}
+.slide-2 {
+  background-image: url("https://source.unsplash.com/11H1SSVcIxc/1600x900");
+}
+.slide-3 {
+  background-image: url("https://source.unsplash.com/OlZ1nWLEEgM/1600x900");
+}
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="menu">
+          <label for="slide-dot-1"></label>
+          <label for="slide-dot-2"></label>
+          <label for="slide-dot-3"></label>
+        </div>
+        
+        <input id="slide-dot-1" type="radio" name="slides" checked>
+          <div class="slide slide-1"></div>
+        
+        <input id="slide-dot-2" type="radio" name="slides">
+          <div class="slide slide-2"></div>
+        
+        <input id="slide-dot-3" type="radio" name="slides">
+          <div class="slide slide-3"></div>
+      </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  position: relative;
+  /* width: 100%;
+  height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(29, 29, 29); */
+}
+.slider_container {
+  position: relative;
+  /* width: 60%;
+  height: 40rem; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.slider {
+  position: relative;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+}
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+.slide .caption {
+  position: absolute;
+  left: 0;
+  /* bottom: 0%; */
+  font-size: 5rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.348);
+  backdrop-filter: blur(10px);
+  padding: 1rem 5rem;
+  border-radius: 0 2rem 2rem 0;
+}
+.slide.one {
+  background: rgb(182, 19, 109);
+}
+.slide.two {
+  background: rgb(255, 64, 64);
+}
+.slide.three {
+  background: rgb(11, 173, 188);
+}
+@keyframes sliding {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <section class="slider_container">
+      <section class="slider">
+        <div class="slide one">
+          <img src="./hero1.jpg" alt="" />
+          <span class="caption"> For bookLovers.</span>
+          <!-- <span>A World of Books for</span> -->
+          <!-- <h3>A World of Books for <br>Young and Old</h3> -->
+          <!-- <button>shop now</button> -->
+        </div>
+        <div class="slide two">
+          <img src="./hero2.jpg" alt="" />
+          <span class="caption"> slide two </span>
+        </div>
+        <div class="slide three">
+          <img src="./hero3.jpg" alt="" />
+          <span class="caption"> slide three </span>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+/* ------------navbar--------------- */
+*{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+.body-1{
+    background: rgba(222, 240, 238, 100);
+}
+.mainnav {
+    position: fixed;
+    top :0%;
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    list-style-type: none;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+    text-decoration: none;
+ background-color: white;
+}
+.mainnav li ul{
+    list-style-type: none;
+    display: flex;
+}
+.mainnav li a{
+    text-decoration: none;
+    color: white;
+}
+.mainnav li ul li a{
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+}
+.mainnav li input{
+    width: 350px;
+    height: 32px;
+    border-radius: 3px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(241, 240, 240);
+    padding: 20px;
+    /* position: fixed;
+    top :0%; */
+
+}
+.nav-icon i{
+    /* padding: 5px; */
+    margin: 10px;
+    font-size: 22px;
+}
+/* ---------------hero-section----------------- */
+#hero{
+    /* overflow-x: hidden; */
+} 
+.hero-div img{
+    background-size: cover;
+    height: 600px;
+    
+ }
+ .hero-contain{
+ position: absolute;
+ top: 200px;
+ left: 120px;
+ /* align-items: center; */
+ }
+ .hero-contain div{
+    font-size: 62px;
+   
+ }
+button{
+    background-color: black;
+color: white;
+   height: 50px;
+   width:120px;
+   margin-left: 200px;
+   margin-top: 20px;
+   border-radius: 10px;
+   font-size: 15px;
+
+}
+
+/* ------------favorite--------------- */
+#fav{
+ 
+}
+ .fav_div2{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    /* justify-content: space-evenly; */
+    padding: 10px;
+    /* margin: 100px; */
+}
+
+.fav_div2 div img{
+    width: 500px;
+    padding: 30px;
+}
+.fav_head{
+    margin-top: 60px;
+margin-left: 50px;
+font-size: 52px;
+}
+.favhead{
+    padding: 20px;
+    font-size: 32px;
+}
+/* ----------------bookbar----------- */
+#bookbar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #e3ebec;
+    /* padding: 40px; */
+    margin: 80px;
+    border-radius: 20px;
+}
+#bookbar div img{
+    width: 250px;
+   margin: 20px;
+}
+
+
+/* ----------------bestseller------------ */
+.bestseller_div{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 30px;
+  
+}
+
+.bestseller_div img{
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    margin: 10px;
+}
+
+
+
+
+
+

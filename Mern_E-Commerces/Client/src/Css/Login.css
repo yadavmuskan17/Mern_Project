@@ -1,0 +1,71 @@
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background: linear-gradient(135deg, #67177d, #d395eb);
+    transition: 0.5s;
+  }
+  
+  /* .form-log {
+    background: white;
+    padding: 2rem;
+    width: 350px;
+    height: 60%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  } */
+  .form-log {
+    background: white;
+    padding: 2rem;
+    width: 350px;
+    height: 65%; /* Increased height */
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* Allows absolute positioning of .logdiv */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevents content from overlapping */
+}
+
+  .hlog {
+    margin-bottom: 1rem;
+    color: #6e48aa;
+  }
+  
+.inlog {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+.logbtn {
+    width: 100%;
+    background: #6e48aa;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .plog {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #6e48aa;
+  }
+  .logdiv {
+    background-color: #6e48aa;
+    width: 100%;
+    height: 20%;
+    border-radius: 50px 50px 0 0;  /* Curved top */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+  

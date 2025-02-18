@@ -1,0 +1,10 @@
+body{
+    margin: 0px;
+    padding: 0px;
+   
+}
+.Login{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}

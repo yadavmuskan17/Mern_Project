@@ -1,0 +1,64 @@
+*{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+   
+}
+#mainlog{
+    overflow-x: hidden;
+}
+.Login{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+.login_div1{
+    margin: 100px;
+
+}
+.login_div2{
+    margin: 110px;
+}
+.login_div1 input{
+    width: 450px;
+    height: 40px;
+    margin: 15px;
+    padding: 5px;
+    background-color:rgb(242,242,242) ;
+    border: none;
+    border-radius: 5px;
+
+}
+    button{
+        background-color: black;
+    color: white;
+       height: 45px;
+       width:120px;
+       margin-top: 20px;
+       border-radius: 10px;
+       font-size: 15px;
+    }
+
+    @media only screen and (max-width:886px){
+        .Login{
+            display: grid;
+            grid-template-columns: auto ;
+        }
+    }
+    @media only screen and (max-width:544px){
+        .login_div1 input{
+            width: 250px;
+            height: 40px;
+        }
+        button{
+           height: 45px;
+           width:50px;
+
+        }
+    }
+
+    
