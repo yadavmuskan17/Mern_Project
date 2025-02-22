@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-import '../css/Earbuds.css';
+import '../Css/Earbuds.css';
 
 const Earbuds = () => {
   const [products, setProducts] = useState([]);
