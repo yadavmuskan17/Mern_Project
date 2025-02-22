@@ -29,6 +29,18 @@ const Sidebar = () => {
           <MdAddTask />
           UPDATE PRODUCT
           </Link>
+          <Link to="customerorders">
+          <MdAddTask />
+          CUSTOMER ORDER
+          </Link>
+          <Link to="displaycustomer">
+          <MdAddTask />
+          CUSTOMER DISPLAY
+           </Link>
+           <Link to="updatecustomer">
+           <MdAddTask />
+           CUSTOMER UPDATE
+           </Link>
          <Link>
           <RiSlideshowView />
           LOGOUT

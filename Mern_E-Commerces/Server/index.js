@@ -4,6 +4,9 @@ const app=express();
 const bodyParser=require('body-parser')
 const adminRoute= require("./Routes/adminRoute");
 const productRoute=require("./Routes/productRoute");
+const USERROUTES=require("./Routes/userRoute");
+const paymentRoute=require("./Routes/payment");
+
 const cors=require('cors')
 const db=require('./db') //used to connect the database with database file
 db();
@@ -17,6 +20,8 @@ app.use('/uploads', express.static('uploads'));
 
 app.use("/admin", adminRoute);
 app.use("/product",productRoute);
+app.use("/user", USERROUTES);
+app.use("/api/payment/",paymentRoute);
 
 
 

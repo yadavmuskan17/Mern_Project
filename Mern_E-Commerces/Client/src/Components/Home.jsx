@@ -7,8 +7,35 @@ import div2img from '../assets/home-div2img.png';
 import homelogo from '../assets/home-logo.png';
 import Home2 from '../Components/Home2';
 import Arrivals from '../Components/Arrival';
+import BASE_URL from '../config';
 
+import { useContext, useEffect, useState } from 'react';
+
+import { myLoginContext } from '../LoginContext';
+import axios from 'axios';
 const Home=()=> {
+  const {setIsLogedIn}=useContext(myLoginContext);
+
+
+  const getProfile=async()=>{
+          const token=localStorage.getItem("token");
+          try {
+            let api=`${BASE_URL}/user/userprofile`;
+            const response=await axios.post(api, null, {headers: { "Authorization": token } });
+            localStorage.setItem("userid", response.data._id)
+            localStorage.setItem("username", response.data.name);
+            setIsLogedIn(true); 
+          } catch (error) {
+            console.log(error)
+          }
+  }
+
+useEffect(()=>{
+  if(localStorage.getItem("token"))
+  {
+    getProfile()
+  }
+},[])
   return (
     <>
     <Carousel data-bs-theme="dark" className='home-side'>

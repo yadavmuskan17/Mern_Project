@@ -1,26 +1,73 @@
-import { useState } from "react";
+
+import { Link } from "react-router-dom";
 import "../Css/Login.css";
+import BASE_URL from "../config";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const AuthForm = () => {
-  const [isLogin, setIsLogin] = useState(false);
+const Login=()=>{
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [userRole, setUserRole] = useState("");
+    const navigate=useNavigate();
+    console.log(email,password,userRole)
 
-  return (
-    <div className={`container-login ${isLogin ? "login-mode" : "signup-mode"}`}>
-      <div className="form-log">
-        <h2 className="hlog">{isLogin ? "Login" : "Sign Up"}</h2>
-        <form>
-          {!isLogin && <input className="inlog"  type="text" placeholder="User Name" required />}
-          <input  className="inlog" type="email" placeholder="Email" required />
-          <input  className="inlog" type="password" placeholder="Password" required />
-          <button className="logbtn">{isLogin ? "Login" : "Sign Up"}</button>
-        </form>
-        <p onClick={() => setIsLogin(!isLogin)} className="plog">
-          {isLogin ? "Don't have an account? Sign Up" : "Already have an account? Login"}
-        </p>
-        <div className="logdiv">Welcome</div>
-      </div>
-    </div>
-  );
-};
 
-export default AuthForm;
+
+
+    const handleSubmit=async(e)=>{
+        e.preventDefault();
+        const api=`${BASE_URL}/user/userlogin`;
+        if (userRole=="user")
+        {
+        try {
+             const response= await axios.post(api, {email:email, password:password});
+             console.log(response);
+             localStorage.setItem("token", response.data.token);
+             navigate("/home");
+           } catch (error) {
+            console.log(error)
+        }
+    }
+    }
+
+
+    // useEffect(()=>{
+    //     if(localStorage.getItem("username"))
+    //     {
+    //         navigate("/home")
+    //     }
+    // },[])
+    return(
+        <>
+         <div className="signupcontainer" style={{marginTop:"-20px", marginBottom:"-37px"}}>
+            <div className="signup-box" style={{}}>
+                <h2 className="signup-title">Log In</h2>
+                <form className="signup-form">
+                    <input type="email" name="email" placeholder="Email" className="signup-input"
+                    value={email} onChange={(e)=>{setEmail(e.target.value)}} />
+                    <input type="password" name="password" placeholder="Password" className="signup-input" 
+                    value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+
+                        <select  className="signup-input"  name="userrole" value={userRole} 
+                        onChange={(e)=>{setUserRole(e.target.value)}}>
+                           <option>Select Role</option>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+
+
+                    
+
+                    <button type="submit" className="signup-button" onClick={handleSubmit}>Login</button>
+                </form>
+                <p className="signup-text">
+                    Dont have an account? <Link to="/signup" className="signup-link">Sign Up</Link>
+                </p>
+            </div>
+        </div>
+        </>
+    )
+}
+export default Login;

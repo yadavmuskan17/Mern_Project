@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/Arrival.css';
 import { useDispatch } from "react-redux";
-import { addtocart } from '../Redux/cardSlice';
+import {addtoCart} from "../Redux/cardSlice";
 import BASE_URL from "../config";
 import { FaRegHeart, FaStar } from "react-icons/fa";
 
@@ -40,7 +40,7 @@ useEffect(()=>{
                 <Button
                   variant="dark"
                   className="rounded-pill px-3"           
-                   onClick={()=>{dispatch(addtocart({id:key._id, name:key.name, brand:key.brand, price:key.price,
+                   onClick={()=>{dispatch(addtoCart({id:key._id, name:key.name, brand:key.brand, price:key.price,
                      description:key.description, category:key.category,  images:key.images, defaultImage:key.defaultImage, 
                      ratings:key.ratings, status:key.status, qnty:1}))}}
 

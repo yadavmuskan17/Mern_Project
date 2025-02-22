@@ -104,6 +104,9 @@ route.post("/productsave", upload.array("files", 10), (req, res, next) => {
 route.get("/productdisplay", AdminController.productDisplay);
 route.post("/productmakeprimary", AdminController.productMakePrimary);
 route.post("/productmakenormal", AdminController.productMakeNormal);
-
+// route.post('/deleteProduct', AdminControllers.DeleteProduct);
+route.get('/customerOrders', AdminController.CustomerOrderDetails);
+route.get('/displaycustomer', AdminController.DisplayCustomer);
+route.post('/userDelete', AdminController.CustomerDelete);
 
 module.exports = route;
